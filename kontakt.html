@@ -19,9 +19,75 @@
 
   <main>
     <h2>Boka bord</h2>
-    <!-- TODO: Skriv ingressen från innehall.md -->
+    <p>Fyll i formuläret så bekräftar vi din bokning inom ett dygn.
+       Fält markerade med * är obligatoriska.</p>
 
     <form action="#" method="post">
+      <div class="falt">
+      <label for="namn">Namn*</label>
+      <input type="text" id="namn" name="namn"
+      autocomplete="name" required>
+      </div> 
+      <div class="falt">
+        <label for="E-post">E-postadress*</label>
+        <input type="email" id="E-post" name="E-post" 
+        autocomplete="email" required>
+      </div>
+      <div class="falt">
+        <label for="Telefon">Telefon (valfritt)</label>
+        <input type="tel" id="Telefon" 
+        name="Telefon"
+        autocomplete="tel"> 
+      </div>
+      <div class="falt">
+        <label for="Datum"> Datum*</label>
+        <input type="date" id="Datum" 
+        name="Datum" required>
+      </div>
+      <div class="falt">
+      <label for="Antal">Antal personer*</label>
+      <select type="select: 1, 2, 3, 4, 5 eller fler" id="Antal" 
+      name="Antal" required>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="fler">Fler</option>
+      </select>
+      </div>
+      <div class="falt">
+        <label for="Kost">Kostönskemål (valfritt)</label>
+        <select type="kryssrutor: Vegetarisk, Vegansk, Glutenfri" id="Kost"
+         name="Kost">
+          <option value="Vegetarisk">Vegetarisk</option>
+          <option value="Vegansk">Vegansk</option>
+          <option value="Glutenfri">Glutenfri</option>
+        </select>
+      </div>
+      <div class="falt">
+      <label for="Svar">Hur vill du få bekräftelsen*</label>
+      <select type="radioknappar: E-post, sms" id="Svar" 
+      name="Svar">
+        <option value="E-post">E-post</option>
+        <option value="sms">sms</option>
+      </select>
+      </div>
+<div class="falt">
+  <label for="Önskemäl">Övriga önskemål</label>
+  <textarea id="önskemål"
+  name="önskemål"></textarea>
+</div>
+<div class="falt">
+  <label for="Samtycke"> Jag godkänner att kafe Kardemumma sparar mmina uppgifter för bokningen.*</label>
+  <input type="checkbox" id="Samtycke" name="Samtycke" required>
+</div>
+<div class="falt">
+  <button type="submit">Skicka</button>
+</div>
+
+
+    
       <!-- TODO 1: fält för namn, e-post, telefon, datum (label + input med for/id) -->
       <!-- TODO 2: rullista för antal personer, textarea för önskemål -->
       <!-- TODO 3: fieldset + legend för kostönskemål och bekräftelsesätt -->
